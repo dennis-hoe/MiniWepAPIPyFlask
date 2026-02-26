@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: notes-api-service
+spec:
+  selector:
+    app: notes-api
+  type: NodePort          # Von außen erreichbar
+  ports:
+    - protocol: TCP
+      port: 5000          # Service-Port
+      targetPort: 5000    # Container-Port
+      nodePort: 30000     # Externer Port (30000-32767)
