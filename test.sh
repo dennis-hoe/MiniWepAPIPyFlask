@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BASE_URL="http://notes-api.local"
+#BASE_URL="http://notes-api.local"
+BASE_URL="http://localhost:5000/"
 
 echo "=== POST: Notiz anlegen ==="
 curl -s -X POST $BASE_URL/notes \
